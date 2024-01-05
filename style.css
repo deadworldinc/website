@@ -23,7 +23,7 @@ body{
     opacity: .08;  
     z-index: 1000;
     pointer-events: none;
-    background: url(images\\noise.gif);
+    background: url(images/noise.gif);
 }
 
 .mainInfoContainer{

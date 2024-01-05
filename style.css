@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: .08;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(images\\noise.gif);
+}
+
+.mainInfoContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgb(12, 12, 12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.albumCover{
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    vertical-align: bottom;
+    filter: opacity(75%);
+}
+
+.details{
+    width: 400px;
+    height: 400px;
+    margin-left: 25px;
+    filter: opacity(75%);
+}
+
+.albumTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.albumTitleText{
+    font-size: 22px;
+    font-weight: bold;
+    filter: opacity(75%);
+}
+
+.albumDescriptions{
+    height: 238px;
+    background: rgb(28, 28, 28);
+    border-radius: 25px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descriptionText{
+    text-align: center;
+    filter: opacity(75%);
+}
+
+.countdownTimer{
+    width: 400px;
+    height: 80px;
+    background: rgb(28, 28, 28);
+    border-radius: 25px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbersContainer{
+    display: flex;
+    margin-right: 15px;
+}
+
+.numbersContainer div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: rgb(48, 48, 48 );
+    border-radius: 15px;
+    width: 81.25px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    filter: opacity(75%);
+}
+
+.thitryPxTextBold{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.twentyPxText{
+    font-size: 20px;
+}
+
+.twentyPxTextBold{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.eighteenPxText{
+    font-size: 18px;
+}
+
+.seventeenPxText{
+    font-size: 17px;
+}
+
+.sixteenPxText{
+    font-size: 16px;
+}
+
+.boldInnerText{
+    font-weight: bold;
+}
+
+.toggle {
+    display: none;
+}
+  
+.active {
+    display: inline-block;
+}
+
+.releaseOutNowMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: rgb(48, 48, 48 );
+    border-radius: 15px;
+    width: 370px !important;
+    font-size: 20px;
+    font-weight: bold;
+    filter: opacity(75%);
+}
+
+.performerInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.performerName{
+    font-size: 10px;
+    font-weight: bold;
+    filter: opacity(75%);
+}

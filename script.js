@@ -1,7 +1,7 @@
 let descriptions = document.getElementsByClassName("toggle");
 
 var x = setInterval(function(){
-    let releaseDate = Date.parse("Jan 24, 2024 00:00:00");
+    let releaseDate = Date.parse("Jan 12, 2024 00:00:00");
     let todayDate = new Date();
     let difference = releaseDate - todayDate;
 

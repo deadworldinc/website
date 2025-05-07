@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golem Inc.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <dialog id="signInDialog" style="position: fixed; z-index: 2; margin: auto;">
+        <div class="inputs-container">
+            <input id="inputUsername" placeholder="Username">
+            <input id="inputPassword" type="password" placeholder="Password" style="margin-top: 10px; -webkit-text-security: square;">
+        </div>
+	</dialog>
+    <div class="main-window">
+        <div class="main-window-header">
+            <div class="icon-and-text-container">
+                <i data-lucide="hard-drive"></i>
+                <span id="spanDirectoryPath">
+                    \\server\remote-pc\golem\filesystem\
+                </span>
+            </div>
+            <div class="controls">
+                <i class="control-button" data-lucide="circle-minus"></i>
+                <i class="control-button" data-lucide="circle-stop" style="margin-left: 10px;"></i>
+                <i class="control-button" data-lucide="circle-x" style="margin-left: 10px;"></i>
+            </div>
+        </div>
+        <div id="mainWindowBody" class="main-window-body">
+            <div id="buttonDiskC" class="menu-item icon-and-text-container">
+                <i data-lucide="folder"></i>
+                <span>
+                    C:\
+                </span>
+            </div>
+            <div id="buttonDiskD" class="menu-item icon-and-text-container">
+                <i data-lucide="folder-lock"></i>
+                <span>
+                    D:\
+                </span>
+            </div>
+            <div id="buttonDiskE" class="menu-item icon-and-text-container unaccessible">
+                <i data-lucide="folder-clock"></i>
+                <span>
+                    E:\
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

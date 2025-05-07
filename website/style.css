@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+*:focus {
+    outline: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.main-window {
+    background-color: rgb(30, 30, 30);
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.main-window-header {
+    width: 770px;
+    height: 50px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+    position: relative;
+}
+
+.controls {
+    display: inline-flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgb(128, 128, 128);
+}
+
+.control-button {
+    transition-duration: 250ms;
+}
+
+.control-button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.icon-and-text-container {
+    display: inline-flex;
+    color: rgb(128, 128, 128);
+    font-size: 14px;
+}
+
+.icon-and-text-container span {
+    margin-left: 5px;
+}
+
+.menu-item {
+    width: 770px;
+    padding: 15px;
+    cursor: pointer;
+    transition-duration: 250ms;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-item:hover {
+    background-color: rgb(40, 40, 40);
+    color: rgb(255, 255, 255);
+}
+
+.lucide {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2px;
+}
+
+.unaccessible:hover {
+    color: #ff5353;
+}
+
+.inlined-container {
+    display: inline-flex;
+}
+
+.label {
+    background-color: rgb(45, 45, 45);
+    border-radius: 5px;
+    margin-left: 5px;
+    display: inline-flex;
+    padding-inline: 5px;
+    color: rgba(255, 255, 255, 0.25);
+    transition-duration: 250ms;
+}
+
+.label span {
+    margin-left: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+[popover],
+dialog,
+::backdrop {
+  transition:
+    display 250ms allow-discrete,
+    overlay 250ms allow-discrete,
+    opacity 250ms;
+  opacity: 0;
+}
+
+:popover-open,
+:popover-open::backdrop,
+[open],
+[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  :popover-open,
+  :popover-open::backdrop,
+  [open],
+  [open]::backdrop {
+    opacity: 0;
+  }
+}
+
+@layer demo.support {
+  html {
+    color-scheme: dark light;
+  }
+
+  ::backdrop {
+    background-color: #0005;
+  }
+}
+
+@keyframes blur-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+
+  to {
+    backdrop-filter: blur(5px);
+  }
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    animation: blur-in 250ms forwards;
+}
+
+dialog {
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: rgba(20, 20, 20, 1) !important;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.inputs-container {
+    width: min-content;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-radius: 5px !important;
+    background-color: rgb(30, 30, 30);
+    padding: 10px;
+    color: white;
+    width: 340px;
+    height: 20px;
+}

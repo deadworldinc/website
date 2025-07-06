@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Golem Radio</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="menu">
+        <div id="menuInner" class="menu-inner">
+            <div class="image-and-title">
+                <img src="/mainImage.jpg" width="300px" height="300px" style="border-radius: 15px;">
+            </div>
+            <div class="inputs-container">
+                <button id="buttonPlay" class="default-button">
+                    <span id="btnText" style="margin-left: 2px;">Слушать</span>
+                </button>
+            </div>
+            <div id="descriptionsContainer" class="description-container" style="display: flex; justify-content: center; align-items: center;">
+                <audio id="mainAudio" style="display: none;" src="http://88.210.21.45/stream"></audio>
+                <progress value="100" max="100"></progress>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript">
+            window.onload = function() {
+            let streamPlaying = false;
+            let buttonPlay = document.getElementById("buttonPlay");
+            let btnImage = document.getElementById("btnImage");
+            let btnText = document.getElementById("btnText");
+            let mainAudio = document.getElementById("mainAudio");
+
+            buttonPlay.onclick = function () {
+                if (streamPlaying) {
+                    btnText.innerHTML = "Остановить";
+                    streamPlaying = true;
+                    mainAudio.play();
+                } else {
+                    btnText.innerHTML = "Остановить";
+                    streamPlaying = false;
+                    mainAudio.pause();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
